@@ -46,13 +46,13 @@ Por exemplo, considerando os dois microcontroladores abordados nesse módulo:
 
 ### Arduino Uno:
 
-1) **Simplicidade:**
+1. **Simplicidade:**
    - O Arduino Uno geralmente é usado em projetos simples e pequenos, e muitas vezes não é a escolha primária para sistemas de tempo real complexos.
 
-2) **Limitações de Recursos:**
+2. **Limitações de Recursos:**
    - Recursos limitados, como processamento, memória e armazenamento, podem impor desafios na implementação de sistemas de tempo real mais avançados.
 
-3) **Sistema de Execução Única (Single-threaded):**
+3. **Sistema de Execução Única (Single-threaded):**
    - A maioria dos programas Arduino é single-threaded, o que significa que as tarefas são executadas sequencialmente. Isso pode ser uma limitação em sistemas que exigem respostas rápidas a eventos.
 
 4. **Interrupções:**
