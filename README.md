@@ -58,22 +58,22 @@ Por exemplo, considerando os dois microcontroladores abordados nesse módulo:
 4. **Interrupções:**
    - O Arduino Uno posui interrupção e por isso, é possível abordar determinados elementos de **tempo real** por meio do uso cuidadoso de interrupções programadas. As interrupções são eventos que interrompem a sequência normal de execução do programa para lidar com eventos específicos. No contexto do tempo real, as interrupções podem ser utilizadas para garantir respostas rápidas a eventos externos. Aqui estão algumas relações entre o conceito de RTO (Real-Time Operating System) ou tempo real e as chamadas de interrupções no Arduino Uno:
 
-4.1. **Tempo de Resposta Rápida:**
+   4.1. **Tempo de Resposta Rápida:**
    - A implementação de interrupções permite que o Arduino Uno responda rapidamente a eventos externos. Se houver a necessidade de lidar com eventos em tempo real, como a leitura de sensores ou a resposta a botões, as interrupções podem ser usadas para garantir uma resposta rápida.
 
-4.2. **Priorização de Tarefas:**
+   4.2. **Priorização de Tarefas:**
    - Ao programar interrupções, é possível priorizar tarefas críticas. Por exemplo, se houver várias tarefas a serem executadas, as interrupções podem ser usadas para garantir que a tarefa mais crítica seja atendida imediatamente.
 
-4.3. **Temporizadores para Agendamento:**
+   4.3. **Temporizadores para Agendamento:**
    - Os temporizadores e as interrupções relacionadas a eles podem ser usados para agendar tarefas em intervalos específicos. Isso é útil para a execução periódica de operações em sistemas de tempo real.
 
-4.4. **Manuseio de Eventos Externos:**
+   4.4. **Manuseio de Eventos Externos:**
    - Se o projeto envolver a leitura de sensores ou a resposta a eventos externos, como botões ou sinais, as interrupções podem ser configuradas para lidar com esses eventos assim que ocorrerem, garantindo uma resposta rápida.
 
-4.5. **Evitar Bloqueios:**
+   4.5. **Evitar Bloqueios:**
    - Em sistemas de tempo real, é crucial evitar bloqueios (delays longos que impedem a execução de outras tarefas). As interrupções podem ser usadas para realizar tarefas assíncronas, permitindo que o programa principal continue sua execução enquanto eventos específicos são tratados em segundo plano.
 
-4.6. **Otimização do Código:**
+   4.6. **Otimização do Código:**
    - Ao usar interrupções de maneira eficiente, é possível otimizar o código para garantir que tarefas críticas sejam atendidas sem atrasos significativos, mesmo em um ambiente sem um RTOS completo.
 
 Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo real complexos, a compreensão e o uso adequado de interrupções podem ajudar a introduzir elementos de tempo real em projetos mais simples, equilibrando as limitações de recursos do microcontrolador. 
