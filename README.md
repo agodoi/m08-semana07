@@ -367,13 +367,12 @@ K_BACKSPACE | backspace
 K_RETURN | return
 K_ESCAPE | escape
 K_SPACE	| space
-K_a,b,c…….z | A to Z Alphabet
+K_a,b,c…….z | A to Z alfabeto
 K_KP_ENTER | keypad enter
 K_UP	| up arrow
 K_DOWN	| down arrow
 K_RIGHT | right arrow
 K_LEFT  | Left arrow
-K_INSERT |Insert
 K_PAGEUP | Page Up
 K_PAGEDOWN | Page Down
 
