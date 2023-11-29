@@ -2,9 +2,17 @@
 
 O principal objetivo deste encontro é validar a integração do sistema embarcado com o projeto desenvolvido. Os subsistemas embarcados e a validação da arquitetura de comunicação é realizada durante este encontro. Conceitos de aprimoramento de desenvolvimento embarcado e formas distintas de realizada a integração do sistema também são realizadas nesta interação. Espera-se que os estudantes consigam construir testes de integração da plataforma embarcada com o restante do projeto desenvolvido. Neste encontro serão abordados: Testes em sistemas embarcados; Testes para sistemas de comunicação; Tópicos avançados de sistemas embarcados.
 
+Algumas questões a serem respondidas nessa instrução:
+
+## Seu projeto é um sistema RTO?
+
 ## Como testar o seu projeto do ponto de vista do hardware?
 
 ## Como ler mouse e teclado na tela do Windows?
+
+## Cuidados com a ponderada dessa semana.
+
+## Você estará pronto para o Kahoot (hahaha)?
 
 ## Assuntos relacionados
 
@@ -25,8 +33,7 @@ O principal objetivo deste encontro é validar a integração do sistema embarca
 - Sensores analógicos e digitais
 
 
-
-## Revisando alguns conceitos
+## Revisando alguns conceitos vistos no autoestudo
 
 ### O que são Sistemas Embarcados?
 
@@ -106,9 +113,9 @@ Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo re
    - Se o projeto envolver comunicação sem fio ou conectividade de rede, o Pico oferece interfaces que facilitam a implementação de sistemas de tempo real distribuídos.
 
 6. **Suporte a RTOS:**
-   - Embora não venha com um RTOS integrado, o Raspberry Pico é capaz de suportar sistemas operacionais em tempo real, como FreeRTOS, que podem ser implementados conforme necessário.
+   - Embora não venha com um RTOS integrado, o Raspberry Pico é capaz de suportar sistemas operacionais em tempo real, como FreeRTOS, que podem ser implementados conforme necessário. Esse [Vídeo](https://www.youtube.com/watch?v=vVVphE1ycpc) de mostra o caminho. 
 
-### Considerações Gerais:
+### Considerações Gerais em sistemas RTO:
 
 1. **Clock e Precisão:**
    - A precisão do relógio interno é crucial em sistemas de tempo real. Certifique-se de que os microcontroladores estão configurados corretamente para garantir tempos precisos.
@@ -124,19 +131,7 @@ Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo re
 
 Ao projetar sistemas de tempo real com Arduino Uno ou Raspberry Pico, é crucial equilibrar os requisitos de tempo real com as limitações de recursos específicas de cada microcontrolador.
 
-
-# Como detectar movimentos do mouse e teclado?
-
-[Biblioteca pynput](https://pynput.readthedocs.io/en/latest/)
-
-[Vídeo 1 - Lendo Mouse](https://www.youtube.com/watch?v=eK7p1e8-6jU)
-
-[Vídeo 2 - Lendo Teclado](https://www.youtube.com/watch?v=MYQnqyVqCDc)
-
-
-
-
-
+## Como testar o seu projeto do ponto de vista do hardware?
 
 
 É ótimo que você esteja pensando em testes práticos para os alunos envolvidos em sistemas embarcados com Arduino Uno e Raspberry Pico, especialmente em um projeto que lê um sensor de umidade da mão humana. Aqui estão alguns testes que podem abranger conceitos importantes de sistemas embarcados:
@@ -179,4 +174,37 @@ Ao projetar sistemas de tempo real com Arduino Uno ou Raspberry Pico, é crucial
 10. **Teste de Armazenamento (Raspberry Pico):**
     - Se estiver utilizando o Raspberry Pico, teste a leitura e escrita em dispositivos de armazenamento, como uma unidade flash.
 
-Lembre-se de documentar os resultados de cada teste, analisar possíveis problemas e otimizar o código conforme necessário. Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas também proporcionarão uma compreensão prática dos conceitos de sistemas embarcados.
+Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas também proporcionarão uma compreensão prática dos conceitos de sistemas embarcados.
+
+
+## Como detectar movimentos do mouse e teclado?
+
+[Biblioteca pynput](https://pynput.readthedocs.io/en/latest/)
+
+[Vídeo 1 - Lendo Mouse](https://www.youtube.com/watch?v=eK7p1e8-6jU)
+
+[Vídeo 2 - Lendo Teclado](https://www.youtube.com/watch?v=MYQnqyVqCDc)
+
+
+### Exemplo de código em python
+
+FAZER
+
+
+## Cuidados com a ponderada dessa semana
+
+A ponderada dessa semana está com o título **PROTOCOLOS: UART - I2C - SPI - Serial communications**
+
+**Pergunta:**
+
+Elabore uma solução usando Raspberry Pi Pico W que use um sensor disponível com comunicação I2C, e que demonstre seus dados no terminal da IDE de comunicação adotada.
+
+**Barema:**
+
+No entregável anterior, é provável que sua dupla tenha usado um sensor I2C. Se não usou, está na hora, se já usou, parabéns, você já fez uma parte da entrega dessa semana. O aluno deve elaborar um documento descritivo que detalhe seu embarcado, em especial:
+
+a) Diagrama de blocos com a pinagem entre microcontrolador e sensor (nesse item, você deve elaborar do zero uma documentação bacana tratando desse item);
+
+b) Descritivo de como funciona a comunicação I2C entre microcontrolador e sensor e a comunicação serial entre microcontrolador e PC (esse item já foi abordado no primeiro entregável, mas lá estava falando do Arduino Uno. Aqui precisa ser do Raspberry Pi Pico. Dependendo da sua documentação, você vai aproveitar quase tudo);
+
+c) Gravar um vídeo-pitchl explicativo, técnico, claro e objetivo, de no mínimo 3 e máximo 5 minutos que demonstre claramente o funcionamento do microcontrolador e sensor, além de demonstrar a impressão de dados no terminal da IDE usada para a comunicação com o Raspberry. Esse vídeo você provavelmente já possui, então você aproveitá-lo desde que ele esteja correto ou senão, reeditá-lo para concorrer à nota máxima.
