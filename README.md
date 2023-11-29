@@ -229,7 +229,7 @@ Ao rodar esse código, você terá uma tela extra na sua frente. Clique dentro d
 
 Agora, troque o ```print("Click")```e ```print("Release")``` por ```print(event)``` e observe novamente o seu terminal.
 
-Os valores importantes aqui são as variáveis ​​**pos** e **button**. O **pos** mostra as coordenadas x e y do mouse e vamos explorar isso um pouco mais em breve. A segunda variável corresponde ao botão que foi clicado. 1 e 2 correspondem ao clique esquerdo e direito, e o botão 3 é o botão central do mouse. Você também pode detectar se a roda do mouse está sendo girada. Os botões 4 e 5 correspondem ao movimento de rolagem para cima e para baixo do mouse.
+Os valores importantes aqui são as variáveis ​​**pos** e **button**. O **pos** mostra as coordenadas x e y do mouse e vamos explorar isso um pouco mais em breve. A segunda variável corresponde ao botão que foi clicado. Geralmente 1 e 3 correspondem ao clique esquerdo e direito, e o botão 2 é o botão central do mouse. Isso pode variar um pouco, faça testes. Você também pode detectar se a roda do mouse está sendo girada. Os botões 4 e 5 correspondem ao movimento de rolagem para cima e para baixo do mouse.
 
 
 ### Usando .get_pressed()
@@ -278,9 +278,9 @@ run = True
 while run:
 
   if pygame.mouse.get_pressed()[0]:
-    print("Left mouse click")
+    print("Botao esquerdo do mouse")
   if pygame.mouse.get_pressed()[2]:
-    print("Right mouse click")
+    print("Botao direito do mouse")
 
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
@@ -288,7 +288,7 @@ while run:
 
 pygame.quit()
 ```
-### Posição do Mouse
+### Posição do Mouse [esse é o mais legal!]
 
 Já abordamos os cliques do mouse, então a próxima coisa a observar é verificar onde na tela está o cursor do mouse. Isso é útil se você estiver criando algo que requer entrada do mouse, como clicar em botões ou atirar em inimigos.
 
