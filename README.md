@@ -196,6 +196,34 @@ Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas 
 
 ### Exemplo de código em python
 
+>>> pip install pygame, né???
+
+```
+import pygame
+
+pygame.init()
+
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 400
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+run = True
+while run:
+
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      run = False
+
+    if event.type == pygame.MOUSEBUTTONDOWN:
+      print("Click")
+    if event.type == pygame.MOUSEBUTTONUP:
+      print("Release")
+
+pygame.quit()
+```
+
+
 ### Atividade da Aula
 
 Desenvolva um código em Python que detecte o movimento do mouse ou a tecla [ENTER] ou barra de espaço, integrando o tapete ao Greg Maker. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis.
