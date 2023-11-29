@@ -28,7 +28,7 @@ O principal objetivo deste encontro é validar a integração do sistema embarca
 
 ## Revisando alguns conceitos
 
-### O que é Sistemas Embarcados?
+### O que são Sistemas Embarcados?
 
 É uma junção de hardware com software para uma função bem específica. Exemplos: 
 
