@@ -323,6 +323,37 @@ while run:
 pygame.quit()
 ```
 
+### Detectando teclas do teclado
+
+```
+# importando pygame module
+import pygame
+
+# importando sys module
+import sys
+
+# inicialisando pygame
+pygame.init()
+
+# Criando a tela
+display = pygame.display.set_mode((300, 300))
+
+# Criando um loop infinito
+while True:
+	
+	# Criando um loop para conferir eventos que estão ocorrendo
+	for event in pygame.event.get():
+		if event.type == pygame.QUIT:
+			pygame.quit()
+			sys.exit()
+		
+		# Conferindo se pressionou uma tecla qualquer
+		if event.type == pygame.KEYDOWN:
+		
+			# Se o evento keydown aconteceu, imprime um trem quarquer, hahaha
+			print("Ocê pressionou uma tecla, trem! Parabéns.")
+```
+
 ### Atividade da Aula
 
 Desenvolva um código em Python que detecte o movimento do mouse ou a tecla [ENTER] ou barra de espaço, integrando o tapete ao Greg Maker. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis.
