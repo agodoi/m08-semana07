@@ -76,7 +76,8 @@ Por exemplo, considerando os dois microcontroladores abordados nesse módulo:
    4.6. **Otimização do Código:**
    Ao usar interrupções de maneira eficiente, é possível otimizar o código para garantir que tarefas críticas sejam atendidas sem atrasos significativos, mesmo em um ambiente sem um RTOS completo.
 
-Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo real complexos, a compreensão e o uso adequado de interrupções podem ajudar a introduzir elementos de tempo real em projetos mais simples, equilibrando as limitações de recursos do microcontrolador. 
+Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo real complexos, a compreensão e o uso adequado de interrupções podem ajudar a introduzir elementos de tempo real em projetos mais simples, equilibrando as limitações de recursos do microcontrolador.
+
 
 ### Raspberry Pico:
 
@@ -113,6 +114,15 @@ Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo re
    - Realize testes para medir a latência do sistema, garantindo que as tarefas críticas sejam concluídas dentro dos prazos especificados.
 
 Ao projetar sistemas de tempo real com Arduino Uno ou Raspberry Pico, é crucial equilibrar os requisitos de tempo real com as limitações de recursos específicas de cada microcontrolador.
+
+
+# Como detectar movimentos do mouse e teclado?
+
+[Biblioteca pynput](https://pynput.readthedocs.io/en/latest/)
+
+[Vídeo 1 - Lendo Mouse](https://www.youtube.com/watch?v=eK7p1e8-6jU)
+
+[Vídeo 2 - Lendo Teclado](https://www.youtube.com/watch?v=MYQnqyVqCDc)
 
 
 
