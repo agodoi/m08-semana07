@@ -8,7 +8,7 @@ Algumas questões a serem respondidas nessa instrução:
 
 ## Como testar o seu projeto do ponto de vista do hardware?
 
-## Como ler mouse e teclado na tela do Windows?
+## Como ler mouse e teclado na tela do Windows? [valendo um voucher]
 
 ## Cuidados com a ponderada dessa semana.
 
