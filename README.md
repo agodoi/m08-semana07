@@ -418,7 +418,7 @@ while True:
 
 ### Atividade da Aula
 
-Desenvolva um código em Python que detecte ao menos um movimento do mouse (direita, esquerda, cima ou baixo) e/ou uma das teclas do Greg, integrando o tapete ao Greg Maker ao seu sistema. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis.
+Desenvolva um código em Python que detecte ao menos um movimento do mouse (direita, esquerda, cima ou baixo) e/ou uma das teclas do Greg, integrando o tapete ao Greg Maker ao seu sistema. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis. Você pode fazer isso até o final da DEV de hoje.
 
 
 <picture>
