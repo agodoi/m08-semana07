@@ -2,6 +2,10 @@
 
 O principal objetivo deste encontro é validar a integração do sistema embarcado com o projeto desenvolvido. Os subsistemas embarcados e a validação da arquitetura de comunicação é realizada durante este encontro. Conceitos de aprimoramento de desenvolvimento embarcado e formas distintas de realizada a integração do sistema também são realizadas nesta interação. Espera-se que os estudantes consigam construir testes de integração da plataforma embarcada com o restante do projeto desenvolvido. Neste encontro serão abordados: Testes em sistemas embarcados; Testes para sistemas de comunicação; Tópicos avançados de sistemas embarcados.
 
+## Como testar o seu projeto do ponto de vista do hardware?
+
+## Como ler mouse e teclado na tela do Windows?
+
 ## Assuntos relacionados
 
 - Atuadores
@@ -21,7 +25,10 @@ O principal objetivo deste encontro é validar a integração do sistema embarca
 - Sensores analógicos e digitais
 
 
-## O que é Sistemas Embarcados?
+
+## Revisando alguns conceitos
+
+### O que é Sistemas Embarcados?
 
 É uma junção de hardware com software para uma função bem específica. Exemplos: 
 
@@ -38,13 +45,13 @@ O principal objetivo deste encontro é validar a integração do sistema embarca
 
 O sistema embarcado precisa conter um microcontrolador, além de sensores trazendo informações para tomadas de decisão, que influenciarão os atuadores, atuando em uma ação (esquentar, cortar, lavar, girar, abrir, travar/destravar, apitar, acender, apagar, etc).
 
-## O que são Sistemas RTO?
+### O que são Sistemas RTO?
 
 Sistemas de Tempo Real (RTOS) são projetados para responder a eventos em tempo real, garantindo que determinadas tarefas sejam concluídas dentro de prazos predefinidos. 
 
 Por exemplo, considerando os dois microcontroladores abordados nesse módulo:
 
-### Arduino Uno:
+#### Arduino Uno:
 
 1. **Simplicidade:**
    - O Arduino Uno geralmente é usado em projetos simples e pequenos, e muitas vezes não é a escolha primária para sistemas de tempo real complexos.
@@ -78,8 +85,10 @@ Por exemplo, considerando os dois microcontroladores abordados nesse módulo:
 
 Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo real complexos, a compreensão e o uso adequado de interrupções podem ajudar a introduzir elementos de tempo real em projetos mais simples, equilibrando as limitações de recursos do microcontrolador.
 
+**Portanto, o GREG é um microcontrolador limitado, sem condições de memória para embarcar qualquer tipo de solução complexa nesse projeto. Além disso, seu chip UART foi modificado e por isso, ele não aceita novas gravações de código-fonte Arduino**. Assista esse [Short](https://www.youtube.com/watch?v=AhRiUZzxyBI) para melhor entender o Arduino Uno.
 
-### Raspberry Pico:
+
+#### Raspberry Pico:
 
 1. **Dual-Core:**
    - O Raspberry Pico possui dois núcleos ARM Cortex-M0+, permitindo a execução simultânea de tarefas em paralelo. Essa capacidade é benéfica para lidar com operações em tempo real.
