@@ -134,57 +134,65 @@ Ao projetar sistemas de tempo real com Arduino Uno ou Raspberry Pico, é crucial
 ## Como testar o seu projeto do ponto de vista do hardware?
 
 
-É ótimo que você esteja pensando em testes práticos para os alunos envolvidos em sistemas embarcados com Arduino Uno e Raspberry Pico, especialmente em um projeto que lê um sensor de umidade da mão humana. Aqui estão alguns testes que podem abranger conceitos importantes de sistemas embarcados:
-
 1. **Teste de Funcionalidade Básica:**
-   - Certifique-se de que os microcontroladores estão funcionando corretamente.
-   - Execute um programa simples para acender um LED ou exibir uma mensagem no console serial.
+   - Certifique-se de que o microcontrolador estão funcionando minimamente conectando-o na porta USB, e vendo LEDs acenderem. Caso não os veja, o cabo USB pode estar quebrado internamente;
+   - Verifique a condutividade dos circuitos de cada quadrante do tapete com a ajuda de um multímetro. Coloque-o na escala de condutividade (onde ao encostar as duas pontas de prova, o multímetro emite um apito) e encoste uma ponta num borne vermelho ou preto afixados na extremidade do tapete e a outra ponta do multímetro, você encosta em várias partes do fio de cobre exposto no respectivo quadrante. O multímetro deve apitar indicando que a corrente elétrica está passando normalmente.
 
-2. **Teste do Sensor de Umidade:**
-   - Verifique se o sensor de umidade está conectado corretamente ao microcontrolador.
-   - Implemente um código para ler os valores do sensor e exibi-los no console serial.
-   - Realize medições com diferentes níveis de umidade para garantir que o sensor esteja respondendo corretamente.
-
+2. **Teste do Tapete com Greg:**
+   - Plug o Greg Maker na sua porta USB do seu PC;
+   - Plug uma ponta do cabo banana-jacaré no quadrante Q1 do seu tapete e a outra ponta, plug na seta para cima do mouse no Greg;
+   - Vista a pulseira anti-estática no seu pulso e plugue-a no GND do Greg Maker;
+   - Toque suavemente na textura do Q1 do seu tapete e seu mouse deve se mexer para cima na sua tela;
+   - Faça o mesmo procedimento nos quadrante Q2, Q3, Q4 e A5.
+     
 3. **Teste de Comunicação Serial:**
-   - Se estiver usando o Arduino Uno, teste a comunicação serial entre o microcontrolador e o computador. Certifique-se de que é possível enviar e receber dados pelo console serial.
-   - No Raspberry Pico, teste a comunicação serial via USB ou UART.
+   - Se o teste do item (2) ocorreu com sucesso, significa que sua comunicação Serial via USB/UART está funcionando corretamente;
+   - Caso não, tente trocar o cabo USB ou verificar outros quadrantes do seu tapete.
 
 4. **Teste de Alimentação:**
-   - Avalie a eficiência do sistema alimentando-o com diferentes fontes de energia.
-   - Verifique se o sistema responde de maneira adequada a flutuações de energia.
+   - Se sua porta USB não estiver com eficiência no sistema alimentação, o Greg não vai se comportar adequadamente;
+   - Nesse caso, troque de porta USB ou até o PC;
+   - Flutuações de energia interferem no bom funcionamento do microcontrolador.
 
 5. **Teste de Consumo de Energia:**
-   - Meça o consumo de energia do sistema em diferentes estados (por exemplo, em espera, em execução).
-   - Otimize o código para minimizar o consumo de energia, se possível.
+   - O microcontrolador possui níveis diferentes de consumo de corrente elétrica a depender da carga computacional exigido a ele;
+   - Carga computacional alta requer níveis maiores de consumo de corrente elétrica;
+   - Você pode medir o consumo de energia do sistema em diferentes estados, por exemplo, em espera, em execução;
+   - Você deve colocar seu multímetro na escala de corrente e colocá-lo em série na porta USB. Como não temos cabos especiais para isso, deixo aqui essa sugestão, mas não vamos praticá-lo agora.
 
 6. **Teste de Interrupções:**
-   - Implemente interrupções para lidar com eventos específicos, como pressionar um botão.
-   - Verifique se as interrupções estão sendo tratadas corretamente.
+   - No caso do Greg Maker não é possível alterar seu código, mas se fosse o Raspberry Pico, implemente interrupções para lidar com eventos específicos, como pressionar um botão;
+   - Verifique se as interrupções estão sendo tratadas corretamente imprimindo mensagens na Serial todas as vezes que você pressiona o botão.
 
 7. **Teste de Conectividade (Raspberry Pico):**
-   - Se o Raspberry Pico estiver conectado à rede, teste a comunicação por meio de protocolos como MQTT ou HTTP.
-   - Implemente um servidor simples no Raspberry Pico para interagir com ele remotamente.
+   - O Greg não tem WiFi, mas se fosse o Raspberry Pico, faça testes da comunicação WiFi por meio de request do protocolos como MQTT ou HTTP;
+   - Implemente um servidor simples no Raspberry Pico para interagir com ele remotamente;
 
 8. **Teste de Desempenho:**
    - Avalie o desempenho do código em termos de velocidade de leitura do sensor e resposta a eventos.
 
 9. **Teste de Tolerância a Falhas:**
-   - Simule condições de falha (como desconexão temporária do sensor) e observe como o sistema lida com essas situações.
+   - Simule condições de falha (como desconexão temporária de um sensor) e observe como o sistema lida com essas situações;
+   - Ele trava ou continua funcionando adequadamente com o retorno do sensor?
+   - A falta do sensor gera ruídos inesperados no sistema ou comportamentos estranhos?
 
 10. **Teste de Armazenamento (Raspberry Pico):**
-    - Se estiver utilizando o Raspberry Pico, teste a leitura e escrita em dispositivos de armazenamento, como uma unidade flash.
+    - O Greg Maker não tem memória externa. Mas se estiver utilizando o Raspberry Pico, teste a leitura e escrita em dispositivos de armazenamento, como uma unidade (shield) de cartão microSD.
 
 Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas também proporcionarão uma compreensão prática dos conceitos de sistemas embarcados.
 
 
 ## Como detectar movimentos do mouse e teclado?
 
+[Biblioteca Pygame](https://www.geeksforgeeks.org/how-to-get-keyboard-input-in-pygame/)
+
+[Exemplo Mouse e Teclado](http://www.codingwithruss.com/pygame/how-to-get-mouse-input-in-pygame)
+
 [Biblioteca pynput](https://pynput.readthedocs.io/en/latest/)
 
 [Vídeo 1 - Lendo Mouse](https://www.youtube.com/watch?v=eK7p1e8-6jU)
 
 [Vídeo 2 - Lendo Teclado](https://www.youtube.com/watch?v=MYQnqyVqCDc)
-
 
 ### Exemplo de código em python
 
@@ -201,10 +209,10 @@ Elabore uma solução usando Raspberry Pi Pico W que use um sensor disponível c
 
 **Barema:**
 
-No entregável anterior, é provável que sua dupla tenha usado um sensor I2C. Se não usou, está na hora, se já usou, parabéns, você já fez uma parte da entrega dessa semana. O aluno deve elaborar um documento descritivo que detalhe seu embarcado, em especial:
+No entregável anterior, é provável que sua dupla tenha usado um sensor I2C. Se não usou, está na hora! E se já usou, parabéns! Você já fez uma parte da entrega dessa semana. O aluno deve elaborar um documento descritivo que detalhe seu embarcado, em especial:
 
 a) Diagrama de blocos com a pinagem entre microcontrolador e sensor (nesse item, você deve elaborar do zero uma documentação bacana tratando desse item);
 
 b) Descritivo de como funciona a comunicação I2C entre microcontrolador e sensor e a comunicação serial entre microcontrolador e PC (esse item já foi abordado no primeiro entregável, mas lá estava falando do Arduino Uno. Aqui precisa ser do Raspberry Pi Pico. Dependendo da sua documentação, você vai aproveitar quase tudo);
 
-c) Gravar um vídeo-pitchl explicativo, técnico, claro e objetivo, de no mínimo 3 e máximo 5 minutos que demonstre claramente o funcionamento do microcontrolador e sensor, além de demonstrar a impressão de dados no terminal da IDE usada para a comunicação com o Raspberry. Esse vídeo você provavelmente já possui, então você aproveitá-lo desde que ele esteja correto ou senão, reeditá-lo para concorrer à nota máxima.
+c) Gravar um vídeo-pitchl explicativo, técnico, claro e objetivo, de no mínimo 3 e máximo 5 minutos que demonstre claramente o funcionamento do microcontrolador e sensor, além de demonstrar a impressão de dados no terminal da IDE usada para a comunicação com o Raspberry. Esse vídeo você provavelmente já possui, então você pode aproveitá-lo desde que seu conteúdo esteja correto ou senão, reeditá-lo para concorrer à nota máxima.
