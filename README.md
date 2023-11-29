@@ -196,8 +196,10 @@ Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas 
 
 ### Exemplo de código em python
 
->>> pip install pygame, né???
+>>> No VS, pip install pygame, né???
 
+
+### Detectando cliques do mouse
 ```
 import pygame
 
@@ -223,6 +225,99 @@ while run:
 pygame.quit()
 ```
 
+Ao rodar esse código, você terá uma tela extra na sua frente. Clique dentro dessa pequena tela e observe as mensagens do terminal do VS.
+
+Agora, troque o ```print("Click")```e ```print("Release")``` por ```print(event)``` e observe novamente o seu terminal.
+
+Os valores importantes aqui são as variáveis ​​**pos** e **button**. O **pos** mostra as coordenadas x e y do mouse e vamos explorar isso um pouco mais em breve. A segunda variável corresponde ao botão que foi clicado. 1 e 2 correspondem ao clique esquerdo e direito, e o botão 3 é o botão central do mouse. Você também pode detectar se a roda do mouse está sendo girada. Os botões 4 e 5 correspondem ao movimento de rolagem para cima e para baixo do mouse.
+
+
+### Usando .get_pressed()
+
+Alternativamente, podemos verificar o estado dos botões do mouse usando ```pygame.mouse.get_pressed()``` de forma contínua. De maneira semelhante à função ```.key_pressed()``` para entrada do teclado, ela verifica o estado de cada botão e retorna Verdadeiro ou Falso, dependendo se foi clicado.
+
+Executando o código abaixo, você obterá uma saída contínua mostrando o estado de cada botão. Experimente clicar em diferentes botões do mouse e veja o que acontece com a saída.
+
+```
+import pygame
+
+pygame.init()
+
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 400
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+run = True
+while run:
+
+  print(pygame.mouse.get_pressed())
+
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      run = False
+
+pygame.quit()
+```
+
+Podemos verificar cada botão individualmente usando valores de índice. Adicione [0] ao final de .get_pressed() e agora mostrará apenas o estado do botão esquerdo do mouse.
+
+Podemos levar isso um passo adiante e adicionar verificações específicas com uma instrução ```if```. Veja:
+
+```
+import pygame
+
+pygame.init()
+
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 400
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+run = True
+while run:
+
+  if pygame.mouse.get_pressed()[0]:
+    print("Left mouse click")
+  if pygame.mouse.get_pressed()[2]:
+    print("Right mouse click")
+
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      run = False
+
+pygame.quit()
+```
+### Posição do Mouse
+
+Já abordamos os cliques do mouse, então a próxima coisa a observar é verificar onde na tela está o cursor do mouse. Isso é útil se você estiver criando algo que requer entrada do mouse, como clicar em botões ou atirar em inimigos.
+
+Para isso, usamos pygame.mouse.get_pos(), que retorna as coordenadas x e y do cursor do mouse.
+
+Observe que (0, 0) está no canto superior esquerdo da tela, pois é assim que o sistema de coordenadas do pygame está configurado.
+
+```
+import pygame
+
+pygame.init()
+
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 400
+
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+run = True
+while run:
+
+  pos = pygame.mouse.get_pos()
+  print(pos)
+
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      run = False
+
+pygame.quit()
+```
 
 ### Atividade da Aula
 
