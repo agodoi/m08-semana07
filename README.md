@@ -196,7 +196,10 @@ Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas 
 
 ### Exemplo de código em python
 
-FAZER
+### Atividade da Aula
+
+
+Desenvolva um código em Python que detecte o movimento do mouse ou a tecla [ENTER] ou barra de espaço. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis
 
 
 ## Cuidados com a ponderada dessa semana
