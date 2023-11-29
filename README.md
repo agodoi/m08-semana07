@@ -202,6 +202,12 @@ Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas 
 Desenvolva um código em Python que detecte o movimento do mouse ou a tecla [ENTER] ou barra de espaço. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis
 
 
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m8-semana07/blob/main/imgs/bisps__98269.jpg">
+   <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m8-semana07/blob/main/imgs/bisps__98269.jpg)">
+</picture>
+
+
 ## Cuidados com a ponderada dessa semana
 
 A ponderada dessa semana está com o título **PROTOCOLOS: UART - I2C - SPI - Serial communications**
