@@ -426,7 +426,7 @@ Desenvolva um código em Python que detecte ao menos um movimento do mouse (dire
    <img alt="Boucing" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m8-semana07/blob/main/imgs/bisps__98269.jpg)">
 </picture>
 
-**O Bis está uma delícia, inclusive a embalagem que está totalmente grudada nele devido às fortes ondas de calor alí na cozinha do Inteli.**
+**O Bis está uma delícia, inclusive a embalagem que está totalmente grudada nele devido às fortes ondas de calor ali na cozinha do Inteli.**
 
 ## Cuidados com a ponderada dessa semana
 
