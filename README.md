@@ -379,52 +379,46 @@ K_PAGEDOWN | Page Down
 Por exemplo, vamos criar um código para verificar se a tecla "A" ou "J" ou "P" ou "M" foi pressionada ou não. O código para verificação será:
 
 ```
-# importing pygame module
 import pygame
-
-# importing sys module
 import sys
-
-# initialising pygame
 pygame.init()
 
-# creating display
+# Criando a tela
 display = pygame.display.set_mode((300, 300))
 
-# creating a running loop
+# Criando o loop
 while True:
 	
-	# creating a loop to check events that 
-	# are occurring
+	# Criando o loop de conferência de eventos
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			pygame.quit()
 			sys.exit()
 		
-		# checking if keydown event happened or not
+		# Conferindo se uma tecla foi pressionada
 		if event.type == pygame.KEYDOWN:
 			
-			# checking if key "A" was pressed
+			# Conferindo se A foi pressionado
 			if event.key == pygame.K_a:
-				print("Key A has been pressed")
+				print("Tecla A pressionada")
 			
-			# checking if key "J" was pressed
+			# Se J foi pressionado
 			if event.key == pygame.K_j:
-				print("Key J has been pressed")
+				print("Tecla J pressionada")
 			
-			# checking if key "P" was pressed
+			# Se P foi pressionado
 			if event.key == pygame.K_p:
-				print("Key P has been pressed")
+				print("Tecla P pressionada")
 			
-			# checking if key "M" was pressed
+			# Se M foi pressionado
 			if event.key == pygame.K_m:
-				print("Key M has been pressed")
+				print("Tecla M pressionada")
 
 ```
 
 ### Atividade da Aula
 
-Desenvolva um código em Python que detecte o movimento do mouse ou a tecla [ENTER] ou barra de espaço, integrando o tapete ao Greg Maker. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis.
+Desenvolva um código em Python que detecte ao menos um movimento do mouse (direita, esquerda, cima ou baixo) e/ou uma das teclas do Greg, integrando o tapete ao Greg Maker ao seu sistema. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis.
 
 
 <picture>
