@@ -198,8 +198,7 @@ Esses testes não apenas ajudarão a verificar a funcionalidade do projeto, mas 
 
 ### Atividade da Aula
 
-
-Desenvolva um código em Python que detecte o movimento do mouse ou a tecla [ENTER] ou barra de espaço. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis
+Desenvolva um código em Python que detecte o movimento do mouse ou a tecla [ENTER] ou barra de espaço, integrando o tapete ao Greg Maker. Se você o fizer e apresentar ao professor, vai ganhar um voucher valendo um Bis.
 
 
 <picture>
