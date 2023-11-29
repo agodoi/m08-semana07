@@ -85,7 +85,7 @@ Por exemplo, considerando os dois microcontroladores abordados nesse módulo:
 
 Embora o Arduino Uno não seja tradicionalmente associado a sistemas de tempo real complexos, a compreensão e o uso adequado de interrupções podem ajudar a introduzir elementos de tempo real em projetos mais simples, equilibrando as limitações de recursos do microcontrolador.
 
-**Portanto, o GREG é um microcontrolador limitado, sem condições de memória para embarcar qualquer tipo de solução complexa nesse projeto. Além disso, seu chip UART foi modificado e por isso, ele não aceita novas gravações de código-fonte Arduino**. Assista esse [Short](https://www.youtube.com/watch?v=AhRiUZzxyBI) para melhor entender o Arduino Uno.
+**Portanto, o GREG é um microcontrolador limitado, sem condições de memória para embarcar qualquer tipo de solução complexa nesse projeto. Além disso, seu chip UART foi modificado e por isso, ele não aceita novas gravações de código-fonte Arduino**. Assista esse [Short](https://www.youtube.com/watch?v=AhRiUZzxyBI) para melhor entender o Arduino Uno no quesito microPython.
 
 
 #### Raspberry Pico:
