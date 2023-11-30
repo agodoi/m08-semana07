@@ -369,9 +369,9 @@ K_KP_ENTER | keypad enter
 K_UP	| up arrow
 K_DOWN	| down arrow
 K_RIGHT | right arrow
-K_LEFT  | Left arrow
-K_PAGEUP | Page Up
-K_PAGEDOWN | Page Down
+K_LEFT  | left arrow
+K_PAGEUP | page Up
+K_PAGEDOWN | page Down
 
 Por exemplo, vamos criar um código para verificar se a tecla "A" ou "J" ou "P" ou "M" foi pressionada ou não. O código para verificação será:
 
